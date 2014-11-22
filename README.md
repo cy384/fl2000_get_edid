@@ -8,7 +8,7 @@ This is a reverse engineered piece of software: it does some things because "it 
 
 setup/build
 -----------
-You will need a C compiler, libusb with headers etc., and a udev rule to allow non-root access to the device.  Optionally, the read-edid package for parsing the output.  For Ubuntu 14.04:
+You will need a C compiler, libusb with headers etc., and a udev rule to allow non-root access to the device.  Optionally, the read-edid package for parsing the output.  Define the DEBUG macro to build in debug mode, which will print human-readable information about the transfers happening (e.g. add -DDEBUG).  For Ubuntu 14.04:
 
 	sudo apt-get install build-essential libusb-1.0-0-dev read-edid
 	sudo cp 80-fl2000-dev.rules /etc/udev/rules.d/
