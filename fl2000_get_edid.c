@@ -139,21 +139,6 @@ int main(void)
 		fprintf(stderr, "%d bytes from interrupt?\n", bytes_back);
 	}
 
-	/* no idea what these do */
-	TRANSFER_IN(112);
-	SET_DATA(0x85, 0x60, 0x10, 0x04);
-	TRANSFER_OUT(112);
-	TRANSFER_IN(112);
-
-	SET_DATA(0x85, 0x60, 0x18, 0x04);
-	TRANSFER_OUT(112);
-	TRANSFER_IN(112);
-
-	TRANSFER_IN(120);
-	SET_DATA(0x14, 0x0d, 0x01, 0x18);
-	TRANSFER_OUT(120);
-	TRANSFER_IN(120);
-
 	/* now begin the real EDID config and transfer */
 	SET_DATA(0xd0, 0x00, 0x00, 0xcf);
 	TRANSFER_OUT(32800);
