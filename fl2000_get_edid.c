@@ -125,18 +125,22 @@ int main(void)
 		fprintf(stderr, "did you leave your monitor attached?\n");
 	}
 
-	/* wait for monitor attach interrupt, should get a 0x01 response */
-	bytes_back = 0;
-	ret = libusb_interrupt_transfer(fl2000_handle, 0x83, data, 1, &bytes_back, 0);
-
-	if (ret != 0)
+	/* check for monitor; if none, wait for attach interrupt */
+	TRANSFER_IN(32768);
+	if (DATA_EQ(0x00, 0x00, 0x00, 0x00))
 	{
-		goto cleanup;
-	}
+		bytes_back = 0;
+		ret = libusb_interrupt_transfer(fl2000_handle, 0x83, data, 1, &bytes_back, 0);
 
-	if (bytes_back != 1)
-	{
-		fprintf(stderr, "%d bytes from interrupt?\n", bytes_back);
+		if (ret != 0)
+		{
+			goto cleanup;
+		}
+
+		if (bytes_back != 1)
+		{
+			fprintf(stderr, "%d bytes from interrupt?\n", bytes_back);
+		}
 	}
 
 	/* now begin the real EDID config and transfer */

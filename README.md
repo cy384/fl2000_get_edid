@@ -16,7 +16,7 @@ You will need a C compiler, libusb with headers etc., and a udev rule to allow n
 
 usage
 -----
-Plug in the device, run the program, plug in the monitor, recieve EDID.  You may get weird behavior if you don't follow this procedure exactly.  Invocation examples:
+Run program, recieve EDID.  If a monitor is not attached when the program runs, it will wait.  Invocation examples:
 
 	./fl2000_get_edid | parse-edid
 or:
