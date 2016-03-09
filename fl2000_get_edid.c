@@ -6,6 +6,15 @@
  *
  * This software may be modified and distributed under the terms
  * of the BSD license.  See the LICENSE file for details.
+ *
+ * Alternatively, this software may be distributed under the terms of the
+ * GNU General Public License version 2 as published by the Free Software
+ * Foundation.  See the LICENSE_GPL file for details.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+ * more details.
  */
 
 #include <stdio.h>

@@ -25,4 +25,4 @@ or:
 
 license
 -------
-This code is covered by the included BSD 3-clause license (see LICENSE file).
+This code is dual-licensed; you may use, distribute, or modify it under either the terms of the BSD license (see LICENSE file), or the GPL version 2 (see LICENSE_GPL file).
