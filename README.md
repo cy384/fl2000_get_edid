@@ -1,5 +1,7 @@
 fl2000_get_edid
 ===============
+NOTE: This is superseded by [FL's release of a bunch of interface code](https://github.com/fresco-fl2000/fl2000)!
+
 A minimal, experimental program to read EDID from a Fresco Logic FL2000 display adapter (i.e. VID/PID 1d5c:2000).  Tested only on Linux (Ubuntu 14.04/amd64) but should work anywhere libusb does.  Further details on my FL2000 efforts can be found [here](http://www.cy384.com/projects/fl2000dx-driver.html).
 
 caveats
